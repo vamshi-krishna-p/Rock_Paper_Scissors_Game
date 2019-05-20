@@ -60,13 +60,13 @@ class CyclePlayer(Player):
 
 
 # RandomPlayer class which returns a random move from the 'moves' list
-class RandomPlayer():
+class RandomPlayer(Player):
     def random_move(self):
         return random.choice(["rock", "paper", "scissors"])
 
 
 # Constant player class which returns a constant - 'rock'
-class ConstantPlayer():
+class ConstantPlayer(Player):
     def move(self):
         return 'rock'
 
@@ -154,7 +154,7 @@ class Game():
         print("Game over!")
 
 
-# Case: Only if Game executed directly
+# Case: If only Game executed directly
 if __name__ == '__main__':
     # Case1: For Game between 'Computer - (random move)' and User -
     # uncomment below line and comment out 'line 164' 'line 167' and 'line 170'
